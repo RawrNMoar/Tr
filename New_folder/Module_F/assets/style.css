@@ -1,0 +1,154 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+nav{
+    background-color:aliceblue;
+    padding:2rem;
+    display:flex;
+    justify-content: space-between;
+}
+main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:4rem;
+}
+/*Trying to create a hero section*/
+main #container-1{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color:aliceblue;
+    text-align: center;
+}
+h3{
+    text-align: center;
+    margin-top:2rem;
+    font-size:1.7rem;
+}
+main #container-2{
+    width:80%;
+    background-color: aliceblue;
+    border:.2rem solid black;
+    border-radius:2rem;
+    padding:2rem;
+}
+main #container-1 div{
+    background-color:white;
+    width:50%;
+    padding:4rem;
+    border:.2rem solid black;
+    border-radius: 2rem;
+}
+main div #tabs{
+    padding:0rem;
+}
+main #container-2 #tabs{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding:2rem;
+    gap:1rem;
+}
+main div #tabs label{
+    width:16%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border:.2rem solid black;
+    background-color:white;
+    padding:2rem;
+    border-radius:2rem;
+}
+main div #tabs input[type="radio"]{
+    display:none;
+}
+main #container-2 h2{
+    text-align: center;
+}
+h1,h2{
+    font-size:2rem;
+}
+p{
+    font-size:1.4rem;
+}
+/*To hide the panel when the radio button is not clicked*/
+.panel{
+    display:none;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    border: .2rem solid black;
+    background-color:antiquewhite;
+    margin-top:2rem;
+    padding:2rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+.panel img{
+    margin: 2rem 0rem;
+}
+.panel img{
+    width:40%;
+}
+/*To display the panel when the button is checked*/
+#tabs input[type="radio"]:checked + label + .panel{
+    display:block;
+}
+
+input[type="radio"]:checked + label{
+    background-color:antiquewhite;
+}
+label:hover{
+    background-color:cornsilk;
+    cursor: pointer;
+}
+label:active{
+    background-color:burlywood;
+}
+/*To put the panel into the last order and move into the next line thanks to flex-wrap:wrap*/
+.panel{
+    order: 99;
+}
+#container-3{
+    width:80%;
+    background-color:aliceblue;
+    text-align: center;
+    border-radius:2rem;
+    border:.2rem solid black;
+    padding:2rem;
+}
+#container-3 img{
+    width:100%;    
+    margin: 2rem 0rem;
+}
+
+/*A little adjustments for the mobile screen*/
+@media only screen and (max-width: 360px){
+    main div #tabs .panel{
+        width:100%;
+    }
+    main #container-1{
+        width:100%;
+        padding:0rem;
+    }
+    main #container-2{
+        border-radius: 0px;
+        border:none;
+        width:90%;
+        padding:0rem;
+    }
+    label{
+        padding:0px;
+    }
+    main #container-3{
+        border-radius:0px;
+        border:none;
+        width:100%;
+        padding:0px;
+    }
+}
